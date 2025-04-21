@@ -1,4 +1,4 @@
-use clap::Parser;
+use clap::{arg, command, Parser};
 use std::{
     fs::OpenOptions,
     io::{Read, Write},
@@ -6,7 +6,10 @@ use std::{
 };
 
 #[derive(Parser)]
-#[command(version)]
+#[command(
+    version,
+    about = "CLI that goes though the file and subsequent \\input, \\include and packs all the content to the single output file. "
+)]
 struct Cli {
     #[arg(value_hint=clap::ValueHint::DirPath)]
     input_file: PathBuf,
@@ -44,7 +47,7 @@ fn pack_file(input_path: PathBuf, output_path: PathBuf) {
     pack_file_aux(&input_path, &mut file);
 }
 
-// temp func to know if the function is commented
+// temp func to know if the line is commented
 fn is_line_commented(line: &str) -> bool {
     line.trim_start().contains("%")
 }
