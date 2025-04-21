@@ -31,7 +31,7 @@ Second \textit{nested file}
 
 Then if you call:
 ```shell
-latex_packer main.tex output.tex
+latex-packer main.tex output.tex
 ```
 
 You obtain the resulted file:
