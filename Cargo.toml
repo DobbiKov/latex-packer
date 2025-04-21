@@ -2,6 +2,13 @@
 name = "latex-packer"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "CLI that goes though the file and subsequent \\input, \\include and packs all the content to the single output file. "
+homepage = "https://github.com/DobbiKov/latex-packer"
+repository = "https://github.com/DobbiKov/latex-packer"
+readme = "README.md"
+authors = ["DobbiKov <dobbikov@gmail.com>"]
+
 
 [dependencies]
 clap = { version = "4.5.36", features = ["derive"] }
